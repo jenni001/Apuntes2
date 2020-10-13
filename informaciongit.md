@@ -16,11 +16,25 @@
    * add directorio/*.txt : todos los archivos de un directorio determinado con esa extensión solamente
 
 5. git commit -m "comentario": para realizar el commit con comentario
-6. git log --oneline: para mostrar la historia de commits
-7. git resert --hard: volver a una version anterior de commit, moverse a otra version
-8. git push:  subir al repositorio
-9. git remote : para sincronizar con otros repositorios remotos
-10. git pull: para importar cambios de otro repositorio remoto
+6. git log --oneline: para mostrar el historial de commits
+   * git log --graph --oneline : para mostrar el historial de commits pero más grafico y especifico
+
+7. git commit --amend -m "nuevo comentario commit": para cambiar el mensaje del último commit
+8. git rebase -i HEAD~cantidad_commit: cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo:git rebase -i HEAD~3). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos:
+   * git commit --amned -m "Nuevo mensaje": anteriormente vsto para cambiar el mensaje commit
+   * git rebase --continue : para pasar al siguiente
+   * git push --force : para subir 
+
+9. git reset : volver a una version anterior de commit, moverse a otra version
+   * git reset --soft: sin modificar el índice de archivos ni el contenido local, genera un reset de HEAD hacia otro commit, haciendo que los archivos agregados o eliminados y los cambios producidos durante los commits reseteados se mantengan en el contenido local  (modifica el head pero no el índice de datos ni el contenido local)
+   * git reset --mixed: modifica el HEAD y el índice de archivos pero no el contenido local, haciendo que cualquier archivo insertado o eliminado dentro de los commits reseteados no se agrege en el índice de commits futuros (modifica el head y el índice de datos pero no el contenido local)
+   * git reset --hard: modifica el HEAD, el índice de archivos y el contenido local, haciendo que el estado del proyecto sea equivalente al que se encontraba el commit al que se ha reseteado (modifica el head, el índice de datos y el contenido local)
+10. git push:  subir al repositorio
+11. git remote : para sincronizar con otros repositorios remotos
+12. git pull: para importar cambios de otro repositorio remoto
+
+
+ 
 
  ## Formateo de código:
 
@@ -37,13 +51,13 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 
 <br>
 <br>
-<brS>   
+<br>   
 
 
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
 https://gist.github.com/dasdo/9ff71c5c0efa037441b6
-
+https://git-scm.com/
 https://github.com/JJ/aprende-git
 
 
