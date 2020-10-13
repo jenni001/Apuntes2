@@ -29,9 +29,11 @@
    * git reset --soft: sin modificar el índice de archivos ni el contenido local, genera un reset de HEAD hacia otro commit, haciendo que los archivos agregados o eliminados y los cambios producidos durante los commits reseteados se mantengan en el contenido local  (modifica el head pero no el índice de datos ni el contenido local)
    * git reset --mixed: modifica el HEAD y el índice de archivos pero no el contenido local, haciendo que cualquier archivo insertado o eliminado dentro de los commits reseteados no se agrege en el índice de commits futuros (modifica el head y el índice de datos pero no el contenido local)
    * git reset --hard: modifica el HEAD, el índice de archivos y el contenido local, haciendo que el estado del proyecto sea equivalente al que se encontraba el commit al que se ha reseteado (modifica el head, el índice de datos y el contenido local)
-10. git push:  subir al repositorio
-11. git remote : para sincronizar con otros repositorios remotos
-12. git pull: para importar cambios de otro repositorio remoto
+
+10. git reflog: muestra un listado de todos los movimientos que se han hecho, acompañado del hash del commit de cada movimiento (incluido a los que se les ha echo reset)
+11. git push:  subir al repositorio
+12. git remote : para sincronizar con otros repositorios remotos
+13. git pull: para importar cambios de otro repositorio remoto
 
 
  
