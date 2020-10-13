@@ -16,7 +16,7 @@
    * add directorio/*.txt : todos los archivos de un directorio determinado con esa extensión solamente
 
 5. git commit -m "comentario": para realizar el commit con comentario
-6. git log -oneline:
+6. git log --oneline: para mostrar la historia de commits
 7. git resert --hard: volver a una version anterior de commit, moverse a otra version
 8. git push:  subir al repositorio
 9. git remote : para sincronizar con otros repositorios remotos
