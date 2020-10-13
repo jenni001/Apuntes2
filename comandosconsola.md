@@ -70,11 +70,11 @@ En este *documento MD* redactaré un listado de comandos que deben utilizarse po
 - Exit
     * Salir de la consola
 
-
 - Cambiar de unidad: 
     * Para cambiar de unidad lo único que hay que hacer es escribir la letra de la unidad y poner dos puntos
 
-
+<br>
+<br>
 
 Ademas, se pueden encontrar más comandos básicos en internet, por ejemplo en la siguiente página web:
 

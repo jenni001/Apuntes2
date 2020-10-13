@@ -24,18 +24,26 @@
 
  ## Formateo de código:
 
-Se puede observar, que en cuanto escribimos algo con forma de código, *Visual Studio Code* lo resalta automáticamente:
+Se puede observar, que en cuanto escribimos algo con forma de código, *Visual Studio Code* lo resalta en función de como lo escribimos:
 
         echo `Hola`
 
 
-`hola`
+`hola` --> cuando se trata de un comando
 
-    
+</br>
+
+```hola``` --> para marcar un idioma de programación
+
+<br>
+<br>
+<brS>   
 
 
-La siguiente página web contiene información muy útil en cuanto a los comandos para git:
+La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
 https://gist.github.com/dasdo/9ff71c5c0efa037441b6
+
+https://github.com/JJ/aprende-git
 
 
