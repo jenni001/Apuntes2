@@ -20,10 +20,11 @@
    * git log --graph --oneline : para mostrar el historial de commits pero más grafico y especifico
 
 7. git commit --amend -m "nuevo comentario commit": para cambiar el mensaje del último commit
-8. git rebase -i HEAD~cantidad_commit: cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo:git rebase -i HEAD~3). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos:
-   * git commit --amned -m "Nuevo mensaje": anteriormente vsto para cambiar el mensaje commit
+8. git rebase -i HEAD~cantidad_commit: cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo:git rebase -i HEAD~3). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos (para salir :qa!):
+   * git commit --amend -m "Nuevo mensaje": anteriormente visto para cambiar el mensaje commit
    * git rebase --continue : para pasar al siguiente
    * git push --force : para subir 
+   * git rebase --abort: para retroceder si se han cambiado o eliminado los commits al señalar para cambiar erroneamente.
 
 9. git reset : volver a una version anterior de commit, moverse a otra version
    * git reset --soft: sin modificar el índice de archivos ni el contenido local, genera un reset de HEAD hacia otro commit, haciendo que los archivos agregados o eliminados y los cambios producidos durante los commits reseteados se mantengan en el contenido local  (modifica el head pero no el índice de datos ni el contenido local)
@@ -34,6 +35,9 @@
 11. git push:  subir al repositorio
 12. git remote : para sincronizar con otros repositorios remotos
 13. git pull: para importar cambios de otro repositorio remoto
+14. git branch x : para crear ramas nuevas si se le añade un nombra al final, *git branch* a secas, muestra las ramas existentes marcando en cual nos encontramos en ese momento.
+15. git checkout X: para movernos por las ramas existentes, especificando a cual deseamos movernos.
+16. git merge x: para unificar dos ramas, ejecutando en la rama en la cual queremos unificar, indicandole cual se quiere unificar a la posicionada actual.
 
 
  
@@ -61,5 +65,6 @@ La siguiente _página web_ contiene información muy útil en cuanto a los coman
 https://gist.github.com/dasdo/9ff71c5c0efa037441b6
 https://git-scm.com/
 https://github.com/JJ/aprende-git
+https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html
 
 
