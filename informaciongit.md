@@ -1,11 +1,13 @@
  # Información git
+
+ Git es un sistema de control de versiones distribuido, gratuito y de código abierto. Diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Su objetivo es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos.
  
  En este *documento MD* redactaré un listado de comandos que deben utilizarse por consola en **comandos git**:
 
  ## Comandos git:
 
 1. git init: para iniciar el git en la carpeta en la que esta el proyecto
-2. git clone <url>: para clonar un repositorio
+2. git clone *url*: para clonar un repositorio
 3. git status (-s): para ver el estado de todos los archivos (señala si alguno esta modificado), la versiones.
 4. git add (. / un fichero en particular / *.txt): añadir los archivos para el commit
    * add . : para añadir todos los archivos al commit
@@ -26,6 +28,8 @@
    * git push --force : para subir 
    * git rebase --abort: para retroceder si se han cambiado o eliminado los commits al señalar para cambiar erroneamente.
 
+   ![Una imagen de ejemplo de rebase en unificación de ramas](https://wac-cdn.atlassian.com/dam/jcr:e4a40899-636b-4988-9774-eaa8a440575b/02.svg?cdnVersion=1316)
+
 9. git reset : volver a una version anterior de commit, moverse a otra version
    * git reset --soft: sin modificar el índice de archivos ni el contenido local, genera un reset de HEAD hacia otro commit, haciendo que los archivos agregados o eliminados y los cambios producidos durante los commits reseteados se mantengan en el contenido local  (modifica el head pero no el índice de datos ni el contenido local)
    * git reset --mixed: modifica el HEAD y el índice de archivos pero no el contenido local, haciendo que cualquier archivo insertado o eliminado dentro de los commits reseteados no se agrege en el índice de commits futuros (modifica el head y el índice de datos pero no el contenido local)
@@ -36,8 +40,9 @@
 12. git remote : para sincronizar con otros repositorios remotos
 13. git pull: para importar cambios de otro repositorio remoto
 14. git branch x : para crear ramas nuevas si se le añade un nombra al final, *git branch* a secas, muestra las ramas existentes marcando en cual nos encontramos en ese momento.
-15. git checkout X: para movernos por las ramas existentes, especificando a cual deseamos movernos.
-16. git merge x: para unificar dos ramas, ejecutando en la rama en la cual queremos unificar, indicandole cual se quiere unificar a la posicionada actual.
+15. git checkout x: para movernos por las ramas existentes, especificando a cual deseamos movernos.
+16. git merge x: para unificar dos ramas, ejecutando en la rama en la cual queremos unificar, indicandole cual se quiere unificar a la posicionada actual (también se puede hacer mediante rebase).
+  ![Una imagen de ejemplo de mergen antes y después de la unificación de ramas](https://wac-cdn.atlassian.com/dam/jcr:91b1bdf5-fda3-4d20-b108-0bb9eea402b2/08.svg?cdnVersion=1316)
 
 
  
@@ -62,9 +67,9 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
-https://gist.github.com/dasdo/9ff71c5c0efa037441b6
-https://git-scm.com/
+>https://gist.github.com/dasdo/9ff71c5c0efa037441b6
+>https://git-scm.com/
 https://github.com/JJ/aprende-git
-https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html
+>https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html
 
 
