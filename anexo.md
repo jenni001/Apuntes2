@@ -82,4 +82,10 @@ Para verificar los cambios de un archivo entre 2 ramas:
 
         $ git diff branch1 branch2 -- archivo.ext
 
-4. 
+4.  ¿Como cambiar la fecha de un commit antes de hacer 'git push'?
+
+Lo que hay que hacer, es cambiarle la fecha del commit (local) antes de realizar el push, 
+
+
+        $ git commit --amend --date="Wed Feb 16 14:00 2011 +0100"
+

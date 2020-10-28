@@ -68,8 +68,11 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
 >https://gist.github.com/dasdo/9ff71c5c0efa037441b6
+<br>
 >https://git-scm.com/
-https://github.com/JJ/aprende-git
+<br>
+>https://github.com/JJ/aprende-git
+<br>
 >https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html
 
 
