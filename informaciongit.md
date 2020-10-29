@@ -18,10 +18,11 @@
    * add directorio/*.txt : todos los archivos de un directorio determinado con esa extensión solamente
 
 5. git commit -m "comentario": para realizar el commit con comentario
+   * git commit --amend -m "nuevo comentario commit": para cambiar el mensaje del último commit
 6. git log --oneline: para mostrar el historial de commits
    * git log --graph --oneline : para mostrar el historial de commits pero más grafico y especifico
 
-7. git commit --amend -m "nuevo comentario commit": para cambiar el mensaje del último commit
+7. git diff: para observar los cambios que se han realizado
 8. git rebase -i HEAD~cantidad_commit: cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo:git rebase -i HEAD~3). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos (para salir :qa!):
    * git commit --amend -m "Nuevo mensaje": anteriormente visto para cambiar el mensaje commit
    * git rebase --continue : para pasar al siguiente
@@ -38,10 +39,11 @@
 10. git reflog: muestra un listado de todos los movimientos que se han hecho, acompañado del hash del commit de cada movimiento (incluido a los que se les ha echo reset)
 11. git push:  subir al repositorio
 12. git remote : para sincronizar con otros repositorios remotos
-13. git pull: para importar cambios de otro repositorio remoto
-14. git branch x : para crear ramas nuevas si se le añade un nombra al final, *git branch* a secas, muestra las ramas existentes marcando en cual nos encontramos en ese momento.
-15. git checkout x: para movernos por las ramas existentes, especificando a cual deseamos movernos.
-16. git merge x: para unificar dos ramas, ejecutando en la rama en la cual queremos unificar, indicandole cual se quiere unificar a la posicionada actual (también se puede hacer mediante rebase).
+13. git pull: para importar cambios de otro repositorio remoto la rama en la que estemos trabajando actualmente 
+14. git fetch: permite recuperar todos los ficheros de un repositorio remoto y los ubica en una rama oculta de tu repositorio local (hay que utilizar *git merge* para unificarlo en la rama que deseamos)
+15. git branch x : para crear ramas nuevas si se le añade un nombra al final, *git branch* a secas, muestra las ramas existentes marcando en cual nos encontramos en ese momento.
+16. git checkout x: para movernos por las ramas existentes, especificando a cual deseamos movernos.
+17. git merge x: para unificar dos ramas, ejecutando en la rama en la cual queremos unificar, indicandole cual se quiere unificar a la posicionada actual (también se puede hacer mediante rebase).
   ![Una imagen de ejemplo de mergen antes y después de la unificación de ramas](https://wac-cdn.atlassian.com/dam/jcr:91b1bdf5-fda3-4d20-b108-0bb9eea402b2/08.svg?cdnVersion=1316)
 
 
@@ -53,8 +55,11 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 
         echo `Hola`
 
+Similar pasa con : <pre>  como se puede ver </pre>
 
-`hola` --> cuando se trata de un comando
+hola `hola` --> cuando se trata de un comando
+
+el mismo es el resultado de esta <code>  forma </code>
 
 </br>
 
@@ -67,12 +72,13 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
->https://gist.github.com/dasdo/9ff71c5c0efa037441b6
+>[gist.github](https://gist.github.com/dasdo/9ff71c5c0efa037441b6)
 <br>
->https://git-scm.com/
+>[git-scm](https://git-scm.com/)
 <br>
->https://github.com/JJ/aprende-git
+>[github](https://github.com/JJ/aprende-git)
 <br>
->https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html
-
+>[domingogallardo.github](https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html)
+<br>
+>[bitdegree]((https://es.bitdegree.org/tutoriales/tutorial-git/)
 

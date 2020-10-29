@@ -1,6 +1,6 @@
  # Anexo
 
-En este *documento MD* redactaré un listado de las 10 preguntas más interesantes encontradas en la dirección  https://es.stackoverflow.com/questions/tagged/git?tab=Votes:
+En este *documento MD* redactaré un listado de las 10 preguntas más interesantes encontradas en la siguiente [ubicación]( https://es.stackoverflow.com/questions/tagged/git?tab=Votes):
 
  ## Preguntas y respuestas:
 
@@ -42,18 +42,19 @@ Esta duda tiene tres soluciones posibles:
 
 - Archivo por archivo:
 
-        $ git diff branch1 branch2    (1)
-    Muestra los cambios entre branch1 y branch2.
+        git diff branch1 branch2    (1)
 
-        $ git diff branch1..branch2   (2)
-    Muestra lo mismo que en la anterior.
+Muestra los cambios entre branch1 y branch2.
+
+        git diff branch1..branch2   (2)
+
+Muestra lo mismo que en la anterior.
 
 En esta imagen se puede ver el resultado que se mostraria al ejecutar los anteriores comandos: 
 ![1 y 2](https://i.stack.imgur.com/GTxAw.png)
 
-        $ git diff branch1...branch2  (3)  
-
-    Muestra los cambios realizados en la rama branch2 desde que la branch1 comenzó fuera de esa. En la siguiente imagen se puede observar el resultado de este comando:
+        git diff branch1...branch2  (3)  
+Muestra los cambios realizados en la rama branch2 desde que la branch1 comenzó fuera de esa. En la siguiente imagen se puede observar el resultado de este comando:
 ![3](https://i.stack.imgur.com/nxpg4.png)
 
 - Por listado:
@@ -62,13 +63,13 @@ Para obtener un listado de los archivos, estarian los siguientes comandos:
 
 --stat: Muestra una diferencia a nivel binario.
 
-        $ git diff --stat branch1 branch2
+        git diff --stat branch1 branch2
 
 ![--stat](https://i.stack.imgur.com/9q4qA.png)
 
 --numstat: Muestra en número base decimal las diferencias en líneas.
 
-        $ git diff --numstat branch1 branch2
+        git diff --numstat branch1 branch2
 
 ![--numstat](https://i.stack.imgur.com/9q4qA.png)
 
@@ -76,16 +77,107 @@ Para obtener un listado de los archivos, estarian los siguientes comandos:
 
 Si se le añade el argumento --name-status, se obtiene un listado de los archivos que han cambiado entre 2 ramas:
 
-        $ git diff --name-status branch1..branch2
+        git diff --name-status branch1..branch2
 
 Para verificar los cambios de un archivo entre 2 ramas:
 
-        $ git diff branch1 branch2 -- archivo.ext
+        git diff branch1 branch2 -- archivo.ext
 
 4.  ¿Como cambiar la fecha de un commit antes de hacer 'git push'?
 
-Lo que hay que hacer, es cambiarle la fecha del commit (local) antes de realizar el push, 
+Lo que hay que hacer, es cambiarle la fecha del commit (local) antes de realizar el push, utilizando *git commit --amend --date=" "*, como en el siguiente ejemplo:
+
+        git commit --amend --date="Wed Feb 16 14:00 2011 +0100"
+
+Con el ejemplo anterior se cambia la fecha al dia que queramos. En caso de que simplemente queramos cambiarla al momento (día, fecha, hora...) del momento presente, con la siguiente linea bastaria (modifica el último commit):
+
+        git commit --amend --reset-author --no-edit
+
+En caso de querer modificar un commit más antiguo, hay que utilizar un rebase interactivo, cambiando a *edit* el commit que se desea modificar. Para ello hay que utilizar:
+        
+        git rebase -i <ref>
+
+Tras seleccionar el commit deseado, solo hay que utilizar el comando anterior para cambiar la fecha a la actual (*git commit --amend --reset-author --no-edit*).
+        
+Una vez hecho el cambio, para pushear solo algunos commits, se utiliza la siguiente sintaxis:
+
+        git push <remoto> <SHA del commit>:<branch>
+
+5. Quitar archivos añadidos antes de un commit
+
+Para quitarlos del index solamente hay que utilizar el siguiente comando:
+
+        git reset <paths>
+
+De esta forma se restable las entradas del index para los paths (archivo) que indiquemos a su correspondiente estado, como seria el "working tree" (el directorio de trabajo). Con *git reset* se elimina el/los archivos del "index", quedando únicamente el original en el working tree. Es decir, haciendo con *git reset <paths>*  lo opuesto a *git add <paths>*.
+
+6. ¿Para qué es el branch “gh-pages” que aparece en muchos repos de GitHub?
+
+Github da la posibilidad de generar un sitio web a partir de una organización o proyecto, útil para portafolios, blogs y todo tipo de páginas del lado del front-end (totalmente gratis).Esto se hace mediante la rama *gh-pages*.  Es de manera gratuita y con repositorios ilimitados, pero no se puede usar código del lado del servidor (Python, Ruby, PHP, etc.). 
+Sin embargo, si sólo se quiere mostrar un proyecto (Front-end), GitHub Pages es una buena opción, sin necesidad de comprar y/o usar un dominio.
+Una buena página para documentarse sobre esto es la de [platzi](https://platzi.com/blog/github-pages/).
+
+La creacion de esta rama se lleva a cabo de la siguiente forma:
+
+- Posicionados dentro de la carpeta del proyecto:
+
+        git branch gh-pages
+
+- De esta forma se crea la rama(branch) gh-pages en el proyecto. Después únicamente hay que subirlo al repositorio remoto(Github) haciendo un push:
+
+        git push origin gh-pages
 
 
-        $ git commit --amend --date="Wed Feb 16 14:00 2011 +0100"
+7. ¿Cómo averiguar la procedencia de una rama determinada?
 
+Con hacer un checkout a la rama en cuestión y luego ejecutando el siguiente comando, se podra identificar:
+
+        git log --oneline --decorate --all --graph
+
+Un ejemplo seria el siguiente:
+
+![Ejemplo resultado](https://i.stack.imgur.com/P2482.png)
+
+8. Pull a un branch remoto que no existe en mi local
+
+Primero hay que hacer un fetch
+
+        git fetch <remoto> <rama>
+
+Fetch trae la rama remota y la almacena dentro de *<"remoto"> /<"rama">* .
+
+Pull es una combinación de fetch+merge, por ello, cuando se haga el fetch hay que hacer checkout a esa rama dentro del remoto sin mezclarla con alguna local y luego, hacer merge. Otra opción sería crear una rama localmente, hacer checkout a esa rama y luego hacer pull de la rama remota.
+
+El problema con pull es que hace tanto el fetch como un merge automático de esa rama a la rama donde está situado actualmente.
+
+Como ejemplo para resolver esta duda estaria el siguiente: 
+
+        git fetch feature validateEmail
+
+Posteriormente, para entrar a esa rama remota:
+
+        git checkout feature/validateEmail
+
+Luego únicamnete quedaria realizar los cambios que se necesiten y hacer merge con master o con cualquier otra rama.
+
+9. ¿Cómo puedo deshacer el último commit en Git?
+
+Si se quiere mantener los cambios en el working tree para que puedan ser modificados luego:
+
+        git reset [--mixed] HEAD~1
+
+No modifica ni el working tree ni el index. Además de mantener los cambios, no se desea eliminar el commit, sólo mover el head al anterior:
+
+        git reset --soft HEAD~1
+
+Si no se quiere mantener los cambios, solo volver al estado del commit anterior revirtiendo el index y el working tree y destruyendo el último commit completamente como si nunca hubiera existido:
+
+        git reset --hard HEAD~1
+
+10. Git me pide contraseña cada vez que envío a Github
+
+Hay que ejecutar la siguiente linea:
+
+        git config --global credential.helper wincred
+
+Esto hará que se solicite las credenciales una vez, quedando cacheadas para futuras operaciones.
