@@ -140,11 +140,11 @@ Un ejemplo seria el siguiente:
 
 8. Pull a un branch remoto que no existe en mi local
 
-Primero hay que hacer un fetch
+Primero hay que hacer un fetch:
 
         git fetch <remoto> <rama>
 
-Fetch trae la rama remota y la almacena dentro de *<"remoto"> /<"rama">* .
+Fetch trae la rama remota y la almacena dentro de *<"remoto"> /<"rama">*.
 
 Pull es una combinación de fetch+merge, por ello, cuando se haga el fetch hay que hacer checkout a esa rama dentro del remoto sin mezclarla con alguna local y luego, hacer merge. Otra opción sería crear una rama localmente, hacer checkout a esa rama y luego hacer pull de la rama remota.
 
@@ -181,3 +181,8 @@ Hay que ejecutar la siguiente linea:
         git config --global credential.helper wincred
 
 Esto hará que se solicite las credenciales una vez, quedando cacheadas para futuras operaciones.
+
+11. ¿Para qué se usan los tags en Git?
+
+Cada vez que se realiza un *commit*, se crea un identificador único (ejemplo, 0dc20efa9ec36cefd67dcb832d9b01b7531c3a33), y a pesar de que se ponga un comentario al commit, no resulta fácil consultarlo, por lo cual se puede crear una etiqueta que en el futuro facilite el acceso a él de forma rápida. Sirven para dejar un registro, una marca de una versión en concreto, creandose cuando publicas una versión (v0.1, v1.0, v2.2, etc.) de modo que se pueda volver a dicha versión. Si se crea una etiqueta, se puede obtener el código con un *git checkout* (ejemplo, etiqueta v1.0.0, *git checkout* v1.0.0).
+Moverse por un tag es similar a moverse por una rama, pero en modo *detached*, es decir, no se puede modificar el código y hacer un commit salvo creando una rama, pues lo que se tiene es un snapshot, una instantánea del código en un momento dado.
