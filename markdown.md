@@ -44,6 +44,6 @@ Se puede observar, que en cuanto escribimos algo con forma de código, *Visual S
 
 - ```hola``` --> para marcar un idioma de programación, añadiendole  tres ' al principio y al final.
 
-Para realizar en formato markdown, hay el siguiente enlace como ayuda:
+Para realizar en formato markdown, entre muchas otras, hay la siguiente página web como ayuda:
 
-- https://markdown.es/sintaxis-markdown/
+- [Markdown](https://markdown.es/sintaxis-markdown/)

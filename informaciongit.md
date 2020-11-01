@@ -69,12 +69,12 @@ Un archivo gitignore especifica archivos sin seguimiento intencional que Git deb
 
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
->[gist.github](https://gist.github.com/dasdo/9ff71c5c0efa037441b6)
+>[Gist.github](https://gist.github.com/dasdo/9ff71c5c0efa037441b6)
 
->[git-scm](https://git-scm.com/)
+>[Git-scm](https://git-scm.com/)
 
->[github](https://github.com/JJ/aprende-git)
+>[Github](https://github.com/JJ/aprende-git)
 
->[domingogallardo.github](https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html)
+>[Domingogallardo.github](https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html)
 
->[bitdegree](https://es.bitdegree.org/tutoriales/tutorial-git/)
+>[Bitdegree](https://es.bitdegree.org/tutoriales/tutorial-git/)

@@ -1,6 +1,6 @@
  # Anexo
 
-En este *documento MD* redactaré un listado de las 10 preguntas más interesantes encontradas en la siguiente [ubicación]( https://es.stackoverflow.com/questions/tagged/git?tab=Votes):
+En este *documento MD* redactaré un listado de las preguntas más interesantes encontradas en la siguiente [ubicación]( https://es.stackoverflow.com/questions/tagged/git?tab=Votes):
 
  ## Preguntas y respuestas:
 

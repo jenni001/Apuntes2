@@ -73,11 +73,10 @@ En este *documento MD* redactaré un listado de comandos que deben utilizarse po
 - Cambiar de unidad: 
     * Para cambiar de unidad lo único que hay que hacer es escribir la letra de la unidad y poner dos puntos.
 
-<br>
-<br>
+
 
 Además, se pueden encontrar más comandos básicos en internet, por ejemplo en las siguientes páginas web:
 
-* [xataka](https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd)
-* [abrirllave]( https://www.abrirllave.com/cmd/comandos.php)
-* [adslzone](https://www.adslzone.net/esenciales/windows-10/comandos-CMD-consola/)
+* [Xataka](https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd)
+* [Abrirllave]( https://www.abrirllave.com/cmd/comandos.php)
+* [Adslzone](https://www.adslzone.net/esenciales/windows-10/comandos-CMD-consola/)
