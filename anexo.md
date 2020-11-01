@@ -21,13 +21,13 @@ En este *documento MD* redactaré un listado de las 10 preguntas más interesant
 
  ![Estado de una rama con diversos commits](https://i.stack.imgur.com/pK7Zb.png)
 
-- Merge: los dos commits están ahí, obteniendo en el historial una forma de diamante, pero se crea un commit de unión *merge commit* (M), para fusionar ambos (D y E), heredando asi los cambios de ambos.
+- Merge: los dos commits están ahí, obteniendo en el historial una forma de diamante, pero se crea un commit de unión *merge commit* (M), para fusionar ambos (D y E), heredando asi los cambios de ambos.  
 De esta forma juntas el historial de ambas ramas, y si se hace de forma continuada, se creará una serie de historiales intercalados que puede resultar más lioso.
 
 
 ![Merge](https://i.stack.imgur.com/9Ul5w.png)
 
-- Rebase: se crea un commit de unión *rebase commit* (R), que hará que se herede los cambios de ambos commits (D y E), obteniendo el mismo contenido que con el M. Sin embargo, en este caso se elimina el commit E, volviendo a tomar la forma lineal del historial, como si el commit E nunca hubiera existido.
+- Rebase: se crea un commit de unión *rebase commit* (R), que hará que se herede los cambios de ambos commits (D y E), obteniendo el mismo contenido que con el M. Sin embargo, en este caso se elimina el commit E, volviendo a tomar la forma lineal del historial, como si el commit E nunca hubiera existido.  
 De esta forma, los cambios se realizan de forma limpia, como si se hubiera cambiado de rama mediante *checkout* de forma limpia y después empezaste a trabajar desde allí. Esto mantendrá limpio y simple a la hora de que otra persona quiera revisar el historial, aún realizando nuevos cambios en la rama.
 
 ![Rebase](https://i.stack.imgur.com/9Ul5w.png)
@@ -98,7 +98,7 @@ En caso de querer modificar un commit más antiguo, hay que utilizar un rebase i
         git rebase -i <ref>
 
 Tras seleccionar el commit deseado, solo hay que utilizar el comando anterior para cambiar la fecha a la actual (*git commit --amend --reset-author --no-edit*).
-        
+
 Una vez hecho el cambio, para pushear solo algunos commits, se utiliza la siguiente sintaxis:
 
         git push <remoto> <SHA del commit>:<branch>
@@ -113,7 +113,7 @@ De esta forma se restable las entradas del index para los paths (archivo) que in
 
 6. ¿Para qué es el branch “gh-pages” que aparece en muchos repos de GitHub?
 
-Github da la posibilidad de generar un sitio web a partir de una organización o proyecto, útil para portafolios, blogs y todo tipo de páginas del lado del front-end (totalmente gratis).Esto se hace mediante la rama *gh-pages*.  Es de manera gratuita y con repositorios ilimitados, pero no se puede usar código del lado del servidor (Python, Ruby, PHP, etc.). 
+Github da la posibilidad de generar un sitio web a partir de una organización o proyecto, útil para portafolios, blogs y todo tipo de páginas del lado del front-end (totalmente gratis).Esto se hace mediante la rama *gh-pages*.  Es de manera gratuita y con repositorios ilimitados, pero no se puede usar código del lado del servidor (Python, Ruby, PHP, etc.).   
 Sin embargo, si sólo se quiere mostrar un proyecto (Front-end), GitHub Pages es una buena opción, sin necesidad de comprar y/o usar un dominio.
 Una buena página para documentarse sobre esto es la de [platzi](https://platzi.com/blog/github-pages/).
 
@@ -184,5 +184,5 @@ Esto hará que se solicite las credenciales una vez, quedando cacheadas para fut
 
 11. ¿Para qué se usan los tags en Git?
 
-Cada vez que se realiza un *commit*, se crea un identificador único (ejemplo, 0dc20efa9ec36cefd67dcb832d9b01b7531c3a33), y a pesar de que se ponga un comentario al commit, no resulta fácil consultarlo, por lo cual se puede crear una etiqueta que en el futuro facilite el acceso a él de forma rápida. Sirven para dejar un registro, una marca de una versión en concreto, creandose cuando publicas una versión (v0.1, v1.0, v2.2, etc.) de modo que se pueda volver a dicha versión. Si se crea una etiqueta, se puede obtener el código con un *git checkout* (ejemplo, etiqueta v1.0.0, *git checkout* v1.0.0).
+Cada vez que se realiza un *commit*, se crea un identificador único (ejemplo, 0dc20efa9ec36cefd67dcb832d9b01b7531c3a33), y a pesar de que se ponga un comentario al commit, no resulta fácil consultarlo, por lo cual se puede crear una etiqueta que en el futuro facilite el acceso a él de forma rápida. Sirven para dejar un registro, una marca de una versión en concreto, creandose cuando publicas una versión (v0.1, v1.0, v2.2, etc.) de modo que se pueda volver a dicha versión. Si se crea una etiqueta, se puede obtener el código con un *git checkout* (ejemplo, etiqueta v1.0.0, *git checkout* v1.0.0).  
 Moverse por un tag es similar a moverse por una rama, pero en modo *detached*, es decir, no se puede modificar el código y hacer un commit salvo creando una rama, pues lo que se tiene es un snapshot, una instantánea del código en un momento dado.

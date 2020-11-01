@@ -21,7 +21,7 @@
 6. git log --oneline: para mostrar el historial de commits.
    * git log --graph --oneline : para mostrar el historial de commits pero más grafico y especifico.
 7. git diff: para observar los cambios que se han realizado.
-8. git rebase -i HEAD~cantidad_commit: cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo:git rebase -i HEAD~3). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos (para salir :qa!):
+8. git rebase -i HEAD"~cantidad_commit": cuando queremos cambiar mensajes de varios commits anteriores ya ejecutados (ejemplo: git rebase -i HEAD"~3"). Este comando muestra un editor de texto donde tenemos que cambiar *pick* por *edit* en los mensajes de los commits que deseamos cambiar, guardamos y después ejecutamos los siguientes comandos (para salir :qa!):
    * git commit --amend -m "Nuevo mensaje": anteriormente visto para cambiar el mensaje commit.
    * git rebase --continue : para pasar al siguiente.
    * git push --force : para subir.
@@ -65,37 +65,16 @@ Para entender mejor la diferencia entre git reset y git revert esta la siguiente
 Un archivo gitignore especifica archivos sin seguimiento intencional que Git debe ignorar. Los patrones que deben ser controlados por versiones y distribuidos a otros repositorios a través de clones (archivos que todos los desarrolladores querrán ignorar) deben ir a un .gitignore archivo.
  
 
- ## Formateo de código:
-
-Se puede observar, que en cuanto escribimos algo con forma de código, *Visual Studio Code* lo resalta en función de como lo escribimos:
-
-        echo `Hola`
-
-- Similar pasa utilizando 'pre' : <pre>  como se puede ver con este ejemplo </pre>
-
-
-- hola `hola` --> cuando se trata de un comando, añadiendole ' al principio y al final.
-
-- El mismo es el resultado de esta <code>  forma </code> utilizando 'code'.
-
-</br>
-
-- ```hola``` --> para marcar un idioma de programación, añadiendole  tres ' al principio y al final.
-
-<br>
-<br>
-<br>   
-
+## Información 
 
 La siguiente _página web_ contiene información muy útil en cuanto a los comandos para git:
 
 >[gist.github](https://gist.github.com/dasdo/9ff71c5c0efa037441b6)
-<br>
->[git-scm](https://git-scm.com/)
-<br>
->[github](https://github.com/JJ/aprende-git)
-<br>
->[domingogallardo.github](https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html)
-<br>
->[bitdegree](https://es.bitdegree.org/tutoriales/tutorial-git/)
 
+>[git-scm](https://git-scm.com/)
+
+>[github](https://github.com/JJ/aprende-git)
+
+>[domingogallardo.github](https://domingogallardo.github.io/practicas-mads/01-intro-spring-boot/comandos-git.html)
+
+>[bitdegree](https://es.bitdegree.org/tutoriales/tutorial-git/)
